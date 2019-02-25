@@ -8,6 +8,8 @@ import { Home } from './components/home/Home';
 import Game from './components/game/Game';
 import { UsersList } from './components/user/UsersList';
 
+const css = require('./App.css');
+
 console.log(`The App version is ${getVersion()}`);
 
 const AppImpl = () => (

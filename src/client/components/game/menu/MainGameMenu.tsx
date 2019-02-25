@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as PIXI from 'pixi.js';
-import { Sprite, Text } from '@inlet/react-pixi';
+import { Text } from '@inlet/react-pixi';
 import { Player } from '../entity/Player';
 
 interface IMainGameMenuProps {
@@ -35,16 +35,27 @@ export class MainGameMenu extends React.Component<IMainGameMenuProps, IMainGameM
     public render() {
         switch (this.state.step) {
             case GameStatus.menu:
+                const titlePosition = {
+                    x: this.props.app.screen.width / 2,
+                    y: (this.props.app.screen.height / 3.5),
+                    anchor: new PIXI.ObservablePoint(() => {}, {}, 0.5)
+                };
+                const subTitlePosition = {
+                    x: this.props.app.screen.width / 2,
+                    y: (this.props.app.screen.height / 2),
+                    anchor: new PIXI.ObservablePoint(() => {}, {}, 0.5)
+                };
                 return <>
                     <Text
                         text='Welcome To Survivombie.io'
-                        x={80}
-                        y={50}
+                        x={titlePosition.x}
+                        y={titlePosition.y}
+                        anchor={titlePosition.anchor}
                         style={
                             new PIXI.TextStyle({
                                 align: 'center',
                                 fontFamily: '"Source Sans Pro", Helvetica, sans-serif',
-                                fontSize: 25,
+                                fontSize: 65,
                                 fontWeight: '400',
                                 fill: ['#ffffff', '#00ff99'], // gradient
                                 strokeThickness: 5,
@@ -65,13 +76,14 @@ export class MainGameMenu extends React.Component<IMainGameMenuProps, IMainGameM
                         pointerdown={() => {
                             this.startGame();
                         }}
-                        x={120}
-                        y={250}
+                        x={subTitlePosition.x}
+                        y={subTitlePosition.y}
+                        anchor={subTitlePosition.anchor}
                         style={
                             new PIXI.TextStyle({
                                 align: 'center',
                                 fontFamily: '"Source Sans Pro", Helvetica, sans-serif',
-                                fontSize: 25,
+                                fontSize: 35,
                                 fontWeight: '400',
                                 fill: ['#000', '#00ff77'], // gradient
                                 strokeThickness: 5,
