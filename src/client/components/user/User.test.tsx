@@ -3,7 +3,7 @@ import CardHeader from '@material-ui/core/CardHeader';
 import Typography from '@material-ui/core/Typography';
 import { createShallow } from '@material-ui/core/test-utils';
 import * as React from 'react';
-import { IUserDTO } from '../../shared/IUserDTO';
+import { IUserDTO } from '../../../shared/IUserDTO';
 import { User } from './User';
 
 describe('<User/>', () => {

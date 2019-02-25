@@ -1,6 +1,6 @@
 {
-  "name": "fullstack-typescript",
-  "version": "1.0.0",
+  "name": "Survivombie.io",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "engines": {
@@ -73,8 +73,12 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
+    "@inlet/react-pixi": "^0.5.1",
     "body-parser": "^1.18.3",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "pixi.js": "^4.8.5",
+    "pixi.js-keyboard": "^1.0.9",
+    "pixi.js-mouse": "^1.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -90,6 +94,7 @@
     "@types/express": "^4.16.0",
     "@types/jest": "^23.3.12",
     "@types/node": "^10.12.18",
+    "@types/pixi.js": "^4.8.6",
     "@types/react": "^16.7.18",
     "axios": "^0.18.0",
     "babel-loader": "^8.0.5",

@@ -7,7 +7,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 
 const css = require('./Home.css');
-const logoImg = require('../../../assets/images/logo.png');
+const logoImg = require('../../../../assets/images/logo.png');
 
 export const Home: React.FunctionComponent = () => (
   <Grid item xs={12}>

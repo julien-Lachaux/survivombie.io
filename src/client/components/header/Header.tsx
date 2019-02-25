@@ -18,9 +18,9 @@ export const Header: React.FunctionComponent = () => (
       </Button>
       <Button
         color='primary'
-        component={(p: any) => <Link to='/about' {...p} />}
+        component={(p: any) => <Link to='/game' {...p} />}
       >
-        About
+        Game
       </Button>
     </Toolbar>
   </AppBar>
