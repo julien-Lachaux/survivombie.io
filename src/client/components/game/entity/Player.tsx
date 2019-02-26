@@ -32,6 +32,7 @@ function keyListener(event: KeyboardEvent, functionsArray: any) {
     }
 }
 
+// TODO refaire le system de mouvement
 export class Player extends React.Component<IMainGameMenuProps, IMainGameMenuState> {
 
     public vitesse: number = 0.9;

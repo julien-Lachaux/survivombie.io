@@ -22,7 +22,7 @@ export default class GameEngine extends React.Component<IGameEngineProps, IGameE
     this.state = {
       backgroundColor: 0x012b30,
     };
-    console.log('ok');
+    console.log('pixi engine started ! !');
   }
 
   public resizeGameScreen(width: number, height: number): void {
