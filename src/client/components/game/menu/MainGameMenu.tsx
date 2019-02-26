@@ -1,7 +1,9 @@
 import * as React from 'react';
 import * as PIXI from 'pixi.js';
-import { Text } from '@inlet/react-pixi';
+import { Text, ParticleContainer } from '@inlet/react-pixi';
 import { Player } from '../entity/Player';
+import Tree from '../entity/decorations/Tree';
+import { TreeVariant } from '../entity/decorations/Tree';
 
 interface IMainGameMenuProps {
     app: PIXI.Application;
@@ -101,7 +103,14 @@ export class MainGameMenu extends React.Component<IMainGameMenuProps, IMainGameM
                 </>;
                 break;
             case GameStatus.game:
-                return <Player app={this.props.app} />;
+                return <>
+                    <Player app={this.props.app} />
+                    <ParticleContainer position={[150, 150]} properties={{ position: true }}>
+                        <Tree variant={TreeVariant.spring_1} position={new PIXI.Point(250, 250)} />
+                        <Tree variant={TreeVariant.spring_1} position={new PIXI.Point(500, 500)} />
+                        <Tree variant={TreeVariant.spring_1} position={new PIXI.Point(50, 50)} />
+                    </ParticleContainer>
+                </>;
                 break;
             default:
                 return <></>;
